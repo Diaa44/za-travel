@@ -1,6 +1,7 @@
 {
     "singleQuote": true,
     "importOrder": [
+        "^@(reduxjs|mui|emotion)/(.*)$",
         "^@(.*)/(.*)$",
         "^[./]"
     ],
