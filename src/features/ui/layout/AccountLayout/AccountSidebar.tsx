@@ -18,11 +18,10 @@ import {
 import { AppRoutes } from '@config/routes';
 import { theme } from '@config/styles';
 import { Colors } from '@config/styles/Colors';
-import { selectUser } from '@features/auth/store/authSlice';
+import { logout, selectUser } from '@features/auth/store/authSlice';
 import AppButton from '@features/ui/AppButton';
 import Logo from '@features/ui/logo/Logo';
 import { useBreakpoints } from '@hooks/useBreakpoints';
-import { logout } from '@services/api';
 import { useAppSelector } from '@store/index';
 
 import { ACCOUNT_LINKS } from './data';

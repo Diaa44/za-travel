@@ -1,7 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom';
 
 import { selectAuth } from '@features/auth/store/authSlice';
-//import { selectAuth } from '@features/auth/store/authSlice';
 import Loader from '@features/ui/Loader';
 import { useAppSelector } from '@store/index';
 
