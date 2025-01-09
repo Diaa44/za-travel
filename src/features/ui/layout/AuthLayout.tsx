@@ -1,8 +1,9 @@
 import { Outlet, useLocation } from 'react-router-dom';
 
+import { Box, Grid } from '@mui/material';
+
 import LoginBackground from '@features/auth/assets/login-background.png';
 import SignUpBackground from '@features/auth/assets/sign-up-background.png';
-import { Box, Grid } from '@mui/material';
 
 import Logo from '../logo/Logo';
 

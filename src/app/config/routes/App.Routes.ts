@@ -4,5 +4,5 @@ export const AppRoutes = {
   login: '/login',
   dashboard: '/account/dashboard',
   trips: '/account/trips',
-  addTrip: '/account/add-trip',
+  addTrip: '/account/addTrip',
 };
