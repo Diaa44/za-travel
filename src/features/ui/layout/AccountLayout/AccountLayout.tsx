@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -15,6 +15,7 @@ import {
   styled,
 } from '@mui/material';
 
+import { AppRoutes } from '@config/routes';
 import { theme } from '@config/styles';
 import AppIconButton from '@features/ui/AppIconButton';
 import { useBreakpoints } from '@hooks/useBreakpoints';
@@ -62,8 +63,10 @@ const StyledDrawer = styled(Drawer, {
 const TOOLBAR_STYLES = { mt: 2, mb: 1 };
 
 export default function AccountLayout() {
-  const { md } = useBreakpoints();
-  const [isOpen, setOpen] = useState(true);
+  const location = useLocation();
+  const isPrimaryNavBackgroundColor = location.pathname === AppRoutes.dashboard;
+  const { md, xl } = useBreakpoints();
+  const [isOpen, setOpen] = useState(xl);
 
   const closeDrawer = () => {
     setOpen(false);
@@ -112,7 +115,7 @@ export default function AccountLayout() {
         <>
           <AppBar
             position="fixed"
-            sx={{ boxShadow: 'none', background: 'transparent' }}
+            sx={{ boxShadow: 'none', backgroundColor: 'gray.100' }}
           >
             <Toolbar sx={TOOLBAR_STYLES}>
               <IconButton
@@ -121,7 +124,17 @@ export default function AccountLayout() {
                 edge="start"
                 onClick={handleDrawerToggle}
               >
-                <MenuIcon sx={{ color: 'primary.main', fontSize: 40 }} />
+                <MenuIcon
+                  sx={{
+                    color: {
+                      xs: isPrimaryNavBackgroundColor
+                        ? 'white'
+                        : 'primary.main',
+                      md: 'primary.main',
+                    },
+                    fontSize: 40,
+                  }}
+                />
               </IconButton>
             </Toolbar>
           </AppBar>
