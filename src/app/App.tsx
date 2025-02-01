@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
 
-import AppRouter from '@config/routes/AppRouter';
+import { AppRouter } from '@config/routes';
 import { theme } from '@config/styles';
 import { useAuthStateSubscription } from '@services/firebase';
 
