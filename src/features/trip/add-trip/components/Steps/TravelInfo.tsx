@@ -1,4 +1,5 @@
 import { Dayjs } from 'dayjs';
+// Import Dayjs
 import { Controller, type SubmitHandler, useForm } from 'react-hook-form';
 
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
@@ -86,12 +87,13 @@ export default function LoginForm() {
                     },
                     inputAdornment: { position: 'start' },
                   }}
-                  {...field}
+                  value={field.value ? field.value : null} // Handle Dayjs or null
+                  onChange={(date: Dayjs | null) => field.onChange(date)} // Handle Dayjs object
                   sx={{
                     width: '100%',
                     '& .MuiSvgIcon-root': { ml: 0.1 },
                   }}
-                  maxDate={formValues.endDate}
+                  maxDate={formValues.endDate || undefined} // Handle maxDate as Dayjs
                 />
               )}
             />
@@ -111,9 +113,10 @@ export default function LoginForm() {
                     },
                     inputAdornment: { position: 'start' },
                   }}
-                  {...field}
+                  value={field.value ? field.value : null} // Handle Dayjs or null
+                  onChange={(date: Dayjs | null) => field.onChange(date)} // Handle Dayjs object
                   sx={{ width: '100%' }}
-                  minDate={formValues.startDate}
+                  minDate={formValues.startDate || undefined} // Handle minDate as Dayjs
                 />
               )}
             />
@@ -153,8 +156,8 @@ function useTravelInfoForm() {
     defaultValues: {
       name: '',
       description: '',
-      startDate: null,
-      endDate: null,
+      startDate: null, // Default to null (Dayjs or null)
+      endDate: null, // Default to null (Dayjs or null)
     },
   });
   const formValues = watch();
