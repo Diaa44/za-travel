@@ -1,3 +1,4 @@
+import { Dayjs } from 'dayjs';
 import { Controller, type SubmitHandler, useForm } from 'react-hook-form';
 
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
@@ -12,8 +13,8 @@ interface FormInput {
   previewImage: string | null;
   name: string;
   description: string;
-  startDate: Date | null;
-  endDate: Date | null;
+  startDate: Dayjs | null;
+  endDate: Dayjs | null;
 }
 
 export default function LoginForm() {
