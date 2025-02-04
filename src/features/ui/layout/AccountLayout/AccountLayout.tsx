@@ -77,7 +77,15 @@ export default function AccountLayout() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        bgcolor: 'grey.100',
+        minHeight: { md: '100vh' },
+        height: { xs: '100vh', md: 'auto' },
+        maxHeight: { xs: '-webkit-fill-available', md: 'auto' },
+      }}
+    >
       {/* Desktop Drawer */}
       {md && (
         <>
@@ -160,9 +168,7 @@ export default function AccountLayout() {
         component="main"
         sx={{
           width: '100%',
-          bgcolor: 'grey.100',
-          minHeight: '100vh',
-          height: 'auto',
+
           px: {
             xs: 2,
             md: 7,
