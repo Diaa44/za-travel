@@ -51,8 +51,8 @@ export default function DateSelectInput({
             '& .MuiSvgIcon-root': { ml: 0.1 },
           }}
           value={field.value ? dayjs(field.value) : null}
-          maxDate={maxDate ? dayjs(maxDate) : null} //
-          minDate={minDate ? dayjs(minDate) : null} //
+          maxDate={maxDate ? dayjs(maxDate) : undefined} //
+          minDate={minDate ? dayjs(minDate) : undefined} //
         />
       )}
     />
