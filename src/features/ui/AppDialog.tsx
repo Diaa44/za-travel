@@ -1,5 +1,6 @@
 import CloseIcon from '@mui/icons-material/Close';
 import {
+  Box,
   Dialog,
   DialogActions,
   DialogContent,
@@ -22,6 +23,8 @@ interface Props {
   primaryButtonText: string;
   onPrimaryButtonClick: () => void;
   children: React.ReactNode;
+  isForm?: boolean;
+  maxWidth?: number;
 }
 export default function AppDialog({
   isOpen,
@@ -30,6 +33,8 @@ export default function AppDialog({
   onPrimaryButtonClick,
   children,
   title,
+  isForm,
+  maxWidth,
 }: Props) {
   const { md } = useBreakpoints();
 
@@ -39,7 +44,11 @@ export default function AppDialog({
       aria-labelledby="customized-dialog-title"
       open={isOpen}
       PaperProps={{
-        sx: { borderRadius: 2, width: { md: 864 }, maxWidth: 'inherit' },
+        sx: {
+          borderRadius: 2,
+          width: { md: 864 },
+          maxWidth: maxWidth ?? 'inherit',
+        },
       }}
       fullScreen={!md}
     >
@@ -65,23 +74,36 @@ export default function AppDialog({
       >
         {title}
       </Typography>
-
-      <DialogContent
-        sx={{ px: { xs: MOBILE_PADDING_X, md: DESKTOP_PADDING_X }, py: 0 }}
-      >
-        {children}
-      </DialogContent>
-      <DialogActions
-        sx={{
-          px: { xs: MOBILE_PADDING_X, md: DESKTOP_PADDING_X },
-          pb: { xs: MOBILE_PADDING_Y, md: DESKTOP_PADDING_Y },
-          pt: 3,
-        }}
-      >
-        <AppButton fullWidth onClick={onPrimaryButtonClick}>
-          {primaryButtonText}
-        </AppButton>
-      </DialogActions>
+      <Box component={isForm ? 'form' : 'div'}>
+        <DialogContent
+          sx={{
+            px: { xs: MOBILE_PADDING_X, md: DESKTOP_PADDING_X },
+            py: 0,
+            pb: { xs: 12, md: 0 },
+          }}
+        >
+          {children}
+        </DialogContent>
+        <DialogActions
+          sx={{
+            px: { xs: MOBILE_PADDING_X, md: DESKTOP_PADDING_X },
+            pb: { xs: MOBILE_PADDING_Y, md: DESKTOP_PADDING_Y },
+            pt: 3,
+            position: { xs: 'fixed', md: 'static' },
+            bottom: 0,
+            width: '100%',
+            background: 'white',
+          }}
+        >
+          <AppButton
+            type={isForm ? 'submit' : 'button'}
+            fullWidth
+            onClick={onPrimaryButtonClick}
+          >
+            {primaryButtonText}
+          </AppButton>
+        </DialogActions>
+      </Box>
     </Dialog>
   );
 }
