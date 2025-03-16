@@ -14,6 +14,10 @@ const theme = createTheme({
       primary: '#223644',
       secondary: '#64727C',
     },
+    grey: {
+      [100]: '#F9F9F9',
+      [200]: '#EAEAEA',
+    },
   },
   components: {
     MuiInputBase: {
