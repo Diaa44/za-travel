@@ -22,7 +22,7 @@ export default function ContentLandingPage() {
           width: '100%',
           ml: { xs: 2, md: 6 },
           px: { xs: -5, md: 3 },
-          mt: { xs: -10 },
+          mt: { xs: -4, sm: 7 },
         }}
       >
         <Typography
