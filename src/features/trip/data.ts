@@ -7,6 +7,20 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import type { SvgIconTypeMap } from '@mui/material';
 import type { OverridableComponent } from '@mui/material/OverridableComponent';
 
+import Ellipse1 from './assets/Ellipse 1.jpg';
+import Ellipse2 from './assets/Ellipse 2.jpg';
+import Ellipse3 from './assets/Ellipse 3.jpg';
+import Ellipse4 from './assets/Ellipse 4.jpg';
+import Expenses from './assets/Expenses (2).jpg';
+import HomePageContent from './assets/Home page content (1).jpg';
+import Rectangle1 from './assets/Rectangle 1.jpg';
+import Rectangle2 from './assets/Rectangle 2.jpg';
+import Rectangle3 from './assets/Rectangle 3.jpg';
+import Rectangle6 from './assets/Rectangle 6.jpg';
+import VectorImage12 from './assets/Vector12.svg';
+import VectorImage9 from './assets/Vector 9 (1).svg';
+import VectorImage10 from './assets/Vector 10 (2).svg';
+import VectorImage11 from './assets/Vector 11 (2).svg';
 import PreviewImage1 from './assets/preview_1.jpg.jpg';
 import PreviewImage2 from './assets/preview_2.jpg.jpg';
 import PreviewImage3 from './assets/preview_3.jpg.jpg';
@@ -117,5 +131,105 @@ export const EXPENSES_CATEGORIES: ExpenseCategoryProps[] = [
   {
     id: 6,
     category: 'Other',
+  },
+];
+export interface LandingPageImage {
+  id: string;
+  src: string;
+  alt: string;
+}
+export const LANDING_PAGE_IMAGES: LandingPageImage[] = [
+  {
+    id: 'VectorImage11',
+    src: VectorImage11,
+    alt: 'A detailed travel itinerary displayed on a dashboard.',
+  },
+  {
+    id: 'VectorImage12',
+    src: VectorImage12,
+    alt: 'An interactive trip planning interface with a world map.',
+  },
+  {
+    id: 'VectorImage10',
+    src: VectorImage10,
+    alt: 'A person booking flights and hotels on a travel website.',
+  },
+  {
+    id: 'VectorImage9',
+    src: VectorImage9,
+    alt: 'A soft, fluffy white cloud floating in a bright blue sky.',
+  },
+];
+
+export interface LandingAvatarImage {
+  id: string;
+  src: string;
+  alt: string;
+}
+
+export const LANDING_AVATAR_IMAGES: LandingAvatarImage[] = [
+  {
+    id: 'Ellipse1',
+    src: Ellipse1,
+    alt: 'A group of travelers planning their next adventure together.',
+  },
+  {
+    id: 'Ellipse2',
+    src: Ellipse2,
+    alt: 'A scenic view of a travel destination displayed on a dashboard.',
+  },
+  {
+    id: 'Ellipse3',
+    src: Ellipse3,
+    alt: 'A traveler marking places on an interactive world map.',
+  },
+  {
+    id: 'Ellipse4',
+    src: Ellipse4,
+    alt: 'A user-friendly trip itinerary with activities and schedules.',
+  },
+];
+export interface TravelImagesProps {
+  id: string;
+  src: string;
+  alt: string;
+}
+export const TRAVEL_SECTION_IMAGES: TravelImagesProps[] = [
+  {
+    id: 'Rectangle1',
+    src: Rectangle1,
+    alt: 'A scenic natural landscape with lush greenery and rolling hills.',
+  },
+  {
+    id: 'Rectangle2',
+    src: Rectangle2,
+    alt: 'A serene tropical beach with palm trees and crystal-clear waves.',
+  },
+  {
+    id: 'Rectangle6',
+    src: Rectangle6,
+    alt: 'A serene tropical beach .',
+  },
+  {
+    id: 'Rectangle3',
+    src: Rectangle3,
+    alt: 'A bustling city skyline with modern skyscrapers at sunset',
+  },
+];
+export interface HomeLayoutProps {
+  id: string;
+  src: string;
+  alt: string;
+}
+export const HOME_SECTION_IMAGES: HomeLayoutProps[] = [
+  {
+    id: 'HomePageContent',
+    src: HomePageContent,
+    alt: 'Home page content',
+  },
+  {
+    id: 'Expenses',
+    src: Expenses,
+    alt: 'Expenses',
   },
 ];

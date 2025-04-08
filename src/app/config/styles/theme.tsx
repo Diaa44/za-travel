@@ -10,6 +10,9 @@ const theme = createTheme({
     primary: {
       main: '#729E65',
     },
+    secondary: {
+      main: '#046AAA', // Secondary color
+    },
     text: {
       primary: '#223644',
       secondary: '#64727C',
@@ -17,6 +20,9 @@ const theme = createTheme({
     grey: {
       [100]: '#F9F9F9',
       [200]: '#EAEAEA',
+    },
+    common: {
+      black: '#000000', // Adding black to common colors
     },
   },
   components: {
