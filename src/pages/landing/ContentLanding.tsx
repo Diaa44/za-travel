@@ -21,15 +21,16 @@ export default function ContentLandingPage() {
           mx: 'auto',
           width: '100%',
           ml: { xs: 2, md: 6 },
-          px: { xs: 0, md: 3 },
+          px: { xs: -5, md: 3 },
+          mt: { xs: -10 },
         }}
       >
         <Typography
           sx={{
             fontFamily: 'Poppins',
             fontWeight: 700,
-            fontSize: { xs: '32px', sm: '48px', md: '60px' },
-            lineHeight: { xs: '42px', sm: '48px', md: '70px' },
+            fontSize: { xs: '32px', md: '60px' },
+            lineHeight: { xs: '48px', md: '70px' },
             color: 'text.primary',
             ml: { xs: 0, md: 4 },
 
@@ -151,7 +152,7 @@ export default function ContentLandingPage() {
                 fontSize: { xs: '16px', md: '16px' },
                 width: { xs: '382px', md: '167px' },
                 textAlign: 'left',
-                ml: { xs: -50, md: 0 },
+                ml: { xs: -48, md: 0 },
                 mt: { xs: 6, md: 0 },
                 whiteSpace: { xs: 'nowrap', md: 'normal' }, // prevent it from breaking to next line
               }}

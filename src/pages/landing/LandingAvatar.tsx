@@ -11,8 +11,8 @@ export default function AvatarSection() {
           alt={image.alt}
           src={image.src}
           sx={{
-            width: '3.4375rem',
-            height: '3.4375rem',
+            width: { xs: '51px', md: '55px' },
+            height: { xs: '51px', md: '55px' },
             borderWidth: 2,
             borderStyle: 'solid',
             borderColor: 'grey.200',

@@ -62,10 +62,10 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
             >
               <Stack
                 direction={{ xs: 'column', md: 'row' }}
-                spacing={{ xs: 5, md: 25 }}
+                spacing={{ xs: 5, md: 20 }}
                 alignItems="center"
                 justifyContent="center"
-                sx={{ width: { xs: '100%', md: '100rem' } }}
+                sx={{ width: { xs: '100%', md: '90rem' } }}
               >
                 <Box
                   sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}
@@ -76,7 +76,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                     alt={HOME_SECTION_IMAGES[0].alt}
                     sx={{
                       width: '100%',
-                      maxWidth: { xs: '90%', md: '50.625rem' },
+                      maxWidth: { xs: '90%', md: '40.625rem' },
                       height: 'auto',
                       borderRadius: 2,
                       boxShadow: 'rgba(0, 0, 0, 0.3) -8px 8px 25px -5px',
@@ -87,7 +87,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                   sx={{
                     flex: 1,
                     textAlign: 'left',
-                    maxWidth: { xs: '90%', md: '37.5rem' },
+                    maxWidth: { xs: '90%', md: '33.5rem' },
                   }}
                 >
                   <Typography variant="h6" sx={{ color: 'primary.main' }}>
@@ -141,7 +141,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
             width="100%"
             maxWidth="77rem"
             sx={{
-              maxWidth: { xs: '95%', md: '99rem' },
+              maxWidth: { xs: '95%', md: '80rem' },
               borderWidth: '1px',
             }}
             children={undefined}
@@ -158,10 +158,10 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
             >
               <Stack
                 direction={{ xs: 'column', md: 'row' }}
-                spacing={{ xs: 10, md: 20 }} // Adjusted spacing for different screen sizes
+                spacing={{ xs: 10, md: 25 }} // Adjusted spacing for different screen sizes
                 justifyContent="center"
                 sx={{
-                  width: { xs: '100%', md: '100%' },
+                  width: { xs: '100%', md: '98%' },
                   flexDirection: { xs: 'column', md: 'row' },
                 }}
               >
@@ -179,7 +179,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                     alt={HOME_SECTION_IMAGES[1].alt}
                     sx={{
                       width: '100%',
-                      maxWidth: { xs: '90%', md: '47.625rem' },
+                      maxWidth: { xs: '90%', md: '38.625rem' },
                       mt: { xs: -5 },
                       borderRadius: 2,
                       boxShadow: 'rgba(0, 0, 0, 0.3) -8px 8px 25px -5px',
@@ -192,7 +192,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                     textAlign: 'left',
                     maxWidth: { xs: '90%', md: '41.5rem' },
                     order: { xs: 2, md: 1 },
-                    spacing: { xs: 0, md: 10 }, // Adjust the margin top here
+                    spacing: { xs: 0, md: 7 }, // Adjust the margin top here
                   }}
                 >
                   <Typography
@@ -201,7 +201,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                       color: 'primary.main',
                       textTransform: 'uppercase',
                       mt: { xs: -8, md: 22 },
-                      ml: { xs: 2, md: -20 },
+                      ml: { xs: 2, md: -17 },
                     }}
                   >
                     Expenses
@@ -210,7 +210,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                     variant="h2"
                     sx={{
                       color: 'common.black',
-                      ml: { xs: 2, md: -20 },
+                      ml: { xs: 2, md: -17 },
                       fontSize: { xs: '1.5rem', md: '2.25rem' },
                     }}
                   >
@@ -220,7 +220,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                     sx={{
                       color: 'text.secondary',
                       mt: 2,
-                      ml: { xs: 2, md: -20 },
+                      ml: { xs: 2, md: -17 },
                       width: { xs: '100%' },
                       fontSize: { xs: '18px', md: '20px' },
                     }}
@@ -238,7 +238,7 @@ const TravelFeatures: React.FC<HomeLayoutProps> = ({}) => {
                       display: 'flex',
                       justifyContent: { xs: 'center', md: 'flex-start' },
                       mt: 3,
-                      ml: { xs: 2, md: -20 },
+                      ml: { xs: 2, md: -17 },
 
                       width: '100%',
                     }}

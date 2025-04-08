@@ -9,11 +9,10 @@ function AppButtonPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        px: { xs: '0.5rem', sm: '1rem', md: '1.5rem' },
-        py: '0.5rem',
-        width: '110rem',
-        maxWidth: { xs: '100%', sm: '98vw', md: '95vw' },
-        mx: 'auto',
+        px: { xs: '0.5rem', md: '45px' },
+        py: '16px',
+        width: '1920px',
+        maxWidth: { xs: '100%', md: '95vw' },
       }}
     >
       <Box sx={{ minWidth: { xs: '3rem', md: '6.25rem' } }}>
@@ -27,9 +26,10 @@ function AppButtonPage() {
             color: 'text.main',
             textTransform: 'none',
             borderRadius: '8px',
-            mx: { md: '1rem' },
-            mr: { xs: -4 },
-            width: { xs: '80px', md: '80px' },
+            mx: { xs: '0', md: '16px' },
+            fontSize: { xs: '16px', md: '16px' },
+            mr: { xs: -4, md: 3 },
+            width: { xs: '80px', md: '94px' },
             height: { xs: '48px', md: '48px' },
           }}
         >
@@ -42,9 +42,10 @@ function AppButtonPage() {
             color: 'text.grey',
             textTransform: 'none',
             borderRadius: '8px',
+            fontSize: { xs: '', md: '16px' },
             display: { xs: 'none', md: 'block' },
-            width: { md: '94px' },
-            height: { md: '48px' },
+            width: { xs: '80px', md: '94px' },
+            height: { xs: '48px', md: '48px' },
           }}
         >
           Sign up

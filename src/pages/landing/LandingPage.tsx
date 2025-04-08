@@ -59,7 +59,7 @@ export default function LandingPage() {
             color: theme.palette.primary.main,
             textTransform: 'uppercase',
             textAlign: 'center',
-            mt: { xs: 12, md: 20 },
+            mt: { xs: 16, md: 20 },
           })}
         >
           Features

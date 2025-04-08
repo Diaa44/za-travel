@@ -57,7 +57,7 @@ const LandingLayout: React.FC<LandingPageImage> = ({ imageIndex }) => {
                   : imageIndex === 3
                   ? '154px'
                   : imageIndex === 2
-                  ? '29rem'
+                  ? '22rem'
                   : '40rem',
               height: 'auto',
             }}

@@ -148,7 +148,7 @@ const AdvantagesSection = () => (
       sx={{
         position: 'relative',
         top: 170,
-        ml: 105,
+        ml: 108,
         display: { xs: 'none', md: 'block' },
       }}
     >
@@ -174,7 +174,7 @@ const AdvantagesSection = () => (
             position: { xs: 'relative', md: 'absolute' },
             zIndex: { xs: 0, md: -3 },
             height: { xs: '58px', md: '59px' },
-            top: { xs: '0', md: '249px' },
+            top: { xs: '0', md: '260px' },
             left: { xs: '0', md: '537px' },
           }}
         />
@@ -183,7 +183,7 @@ const AdvantagesSection = () => (
         sx={{
           position: 'relative',
           zIndex: { xs: 0, md: -1 },
-          bottom: { xs: '0', md: '70px' },
+          bottom: { xs: '0', md: '90px' },
           right: { xs: '0', md: '100px' },
           display: { xs: 'none', md: 'block' },
         }}
