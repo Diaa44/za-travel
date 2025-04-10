@@ -131,7 +131,7 @@ const LandingImageCard: React.FC<TravelImagesProps> = ({ imageIndex }) => {
       <Box
         sx={{
           display: { xs: 'block', md: 'none' }, // Show only on mobile
-          width: { xs: '389px', md: '100%' },
+          width: { xs: '384px', md: '100%' },
           height: '184px',
           top: '92px',
           left: '20px',

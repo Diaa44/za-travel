@@ -34,7 +34,7 @@ export default function ContentLandingPage() {
             color: 'text.primary',
             ml: { xs: 0, md: 4 },
 
-            width: { xs: '384px', md: '668px' },
+            width: { xs: '382px', md: '668px' },
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
@@ -51,7 +51,7 @@ export default function ContentLandingPage() {
             letterSpacing: '0.15px',
             color: 'text.secondary',
             mt: { xs: 1, md: 2 },
-            ml: { xs: 0, md: 4 },
+            ml: { xs: 1, md: 4 },
             textAlign: { xs: 'center', md: 'left' },
             maxWidth: { xs: '382px', md: '668px' },
           }}
@@ -81,14 +81,14 @@ export default function ContentLandingPage() {
             endIcon={<ArrowForwardIcon />}
             variant="contained"
             sx={{
-              width: { xs: '380px', md: '326px' },
+              width: { xs: '382px', md: '326px' },
               height: { xs: '56px', md: '56px' },
               mr: { xs: 2, md: 0 },
               mt: { xs: 5, md: 0 },
               mb: { xs: 2, md: 0 },
               borderRadius: '8px',
               textTransform: 'none',
-              fontSize: { xs: '16px', md: '18px' },
+              fontSize: { xs: '18px', md: '18px' },
             }}
           >
             Plan your trip

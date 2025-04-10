@@ -246,16 +246,14 @@ const AdvantagesSection = () => (
             display: 'flex',
             justifyContent: 'center',
             mt: 4,
-            ml: { xs: -4 },
           }}
         >
           <AppButton
             endIcon={<ArrowForwardIcon />}
             variant="contained"
             sx={{
-              width: { xs: '380px', md: '260px' },
+              width: { xs: '382px', md: '260px' },
               height: { xs: '56px', md: '57px' },
-              ml: { xs: 5 },
             }}
           >
             Plan your trip
