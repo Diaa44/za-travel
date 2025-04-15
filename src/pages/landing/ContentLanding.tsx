@@ -116,10 +116,10 @@ export default function ContentLandingPage() {
             topBorder
             bottomBorder
             sx={{
-              width: { xs: '400px', md: '625px' },
+              width: { xs: '380px', md: '625px' },
               mt: { xs: 1, md: 13 },
-              mx: { xs: 'auto', md: 0 },
-              px: { xs: 2, md: 3 },
+              mx: { xs: 0, md: 0 },
+              px: { xs: 1, md: 3 },
               ml: { xs: 0, md: 4 },
             }}
           >
