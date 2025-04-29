@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -76,10 +76,9 @@ export default function AccountLayout() {
   const handleDrawerToggle = () => {
     setOpen(!isOpen);
   };
-  // This call is needed to cause re-render when you change
-  // the url, so error boundary from another page also re-renders
-  // and doesn't show old error from previous page
-  useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <Box
@@ -128,7 +127,7 @@ export default function AccountLayout() {
         <>
           <AppBar
             position="fixed"
-            sx={{ boxShadow: 'none', backgroundColor: 'gray.100' }}
+            sx={{ boxShadow: 'none', backgroundColor: 'grey.100' }}
           >
             <Toolbar sx={TOOLBAR_STYLES}>
               <IconButton

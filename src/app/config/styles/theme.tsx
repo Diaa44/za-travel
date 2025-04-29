@@ -10,6 +10,9 @@ const theme = createTheme({
     primary: {
       main: '#729E65',
     },
+    error: {
+      main: '#EB5757',
+    },
     secondary: {
       main: '#046AAA', // Secondary color
     },
@@ -99,6 +102,30 @@ const theme = createTheme({
           '.Mui-completed': {
             fontWeight: FontWeights.regular,
           },
+        },
+      },
+    },
+    MuiBreadcrumbs: {
+      defaultProps: {
+        style: {
+          fontSize: '1rem',
+          lineHeight: '1.5rem',
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          '& button': {
+            minHeight: 65,
+          },
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: Colors.disabled,
         },
       },
     },
