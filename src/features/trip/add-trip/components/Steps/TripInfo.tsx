@@ -11,18 +11,18 @@ import {
 } from '@mui/material';
 
 import { Colors } from '@config/styles/Colors';
-import PreviewImageDialog from '@features/trip/components/PreviewImageDialog';
-import { TRIP_PREVIEW_IMAGES } from '@features/trip/data';
 import DateSelectInput from '@features/ui/form/DateSelectInput';
 import useDialog from '@hooks/useDialog';
 import { useAppDispatch, useAppSelector } from '@store/index';
 
+import PreviewImageDialog from '../../../components/PreviewImageDialog';
+import { usePreviewImageSrc } from '../../../hooks/usePreviewImageHook';
 import type { Trip } from '../../../types';
 import {
+  nextStep,
   selectWizardTrip,
   setTravelInformation,
 } from '../../store/tripWizardSlice';
-import { nextStep } from '../../store/tripWizardSlice';
 import Pagination from '../Navigation/Pagination';
 
 interface FormInput {
@@ -33,7 +33,7 @@ interface FormInput {
   endDate: Trip['endDate'];
 }
 
-export default function TravelInfo() {
+export default function TripInfo() {
   const { isOpen, open, close } = useDialog();
   const {
     handleSubmit,
@@ -114,6 +114,7 @@ export default function TravelInfo() {
                 inputRef={ref}
                 variant="standard"
                 margin="normal"
+                required
                 fullWidth
                 id="name"
                 label="Trip Name"
@@ -131,6 +132,7 @@ export default function TravelInfo() {
               control={control}
               requireErrorText="Please specify start date!"
               maxDate={formValues.endDate}
+              fullWidth
             />
             <DateSelectInput
               label="End date"
@@ -138,6 +140,7 @@ export default function TravelInfo() {
               control={control}
               requireErrorText="Please specify end date!"
               minDate={formValues.startDate}
+              fullWidth
             />
           </Stack>
         </Stack>
@@ -150,7 +153,6 @@ export default function TravelInfo() {
             inputRef={ref}
             variant="standard"
             margin="normal"
-            required
             fullWidth
             id="description"
             label="Description"
@@ -200,12 +202,7 @@ function useTravelInfoForm({
     },
   });
   const formValues = watch();
-
-  const previewImageSrc = formValues.previewImage?.templateImageId
-    ? TRIP_PREVIEW_IMAGES.find(
-        (image) => image.id === formValues.previewImage?.templateImageId,
-      )?.src
-    : null;
+  const previewImageSrc = usePreviewImageSrc(formValues.previewImage);
 
   const onPreviewImageSave = (previewImage: Trip['previewImage']) => {
     closePreviewImageDialog();
