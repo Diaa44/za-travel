@@ -13,7 +13,7 @@ import { AppRoutes } from '@config/routes';
 import { Colors } from '@config/styles/Colors';
 import AppButton from '@features/ui/AppButton';
 
-import Hero from '../edit/Hero';
+import Hero from '../edit/Hero/Hero';
 import { useGetTripQuery, useUpdateTripMutation } from '../store/tripsApi';
 import type { Trip } from '../types';
 import TripTabs from './TripTabs';
@@ -59,7 +59,7 @@ export default function TripDetails() {
             Delete
           </AppButton>
         </Stack>
-        <Hero trip={trip} />
+        <Hero trip={trip} onUpdate={onTripUpdate} />
         <TripTabs trip={trip} onUpdate={onTripUpdate} />
       </Stack>
     );

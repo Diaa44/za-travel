@@ -53,6 +53,9 @@ export default function Destinations() {
           render={({ field: { ref, ...field }, fieldState }) => (
             <TextField
               autoFocus
+              inputProps={{
+                maxLength: 25,
+              }}
               inputRef={ref}
               variant="standard"
               margin="normal"
@@ -79,6 +82,9 @@ export default function Destinations() {
               rules={{ required: 'Please specify the destination!' }}
               render={({ field: { ref, ...field }, fieldState }) => (
                 <TextField
+                  inputProps={{
+                    maxLength: 25,
+                  }}
                   inputRef={ref}
                   variant="standard"
                   margin="normal"
