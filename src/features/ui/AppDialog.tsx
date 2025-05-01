@@ -25,10 +25,12 @@ interface Props {
   onSecondaryButtonClick?: () => void;
   secondaryButtonText?: string;
   disableSecondaryButton?: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   isForm?: boolean;
   maxWidth?: number;
   isLoading?: boolean;
+  disableBottomTitlePadding?: boolean;
+  hideCloseButton?: boolean;
 }
 export default function AppDialog({
   isOpen,
@@ -43,6 +45,8 @@ export default function AppDialog({
   isForm,
   maxWidth,
   isLoading,
+  disableBottomTitlePadding,
+  hideCloseButton,
 }: Props) {
   const { md } = useBreakpoints();
 
@@ -60,24 +64,26 @@ export default function AppDialog({
       }}
       fullScreen={!md}
     >
-      <IconButton
-        aria-label="close"
-        onClick={onClose}
-        sx={{
-          position: 'absolute',
-          right: 16,
-          top: 24,
-          color: (theme) => theme.palette.grey[500],
-        }}
-      >
-        <CloseIcon fontSize="large" sx={{ color: 'text.primary' }} />
-      </IconButton>
+      {!hideCloseButton && (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: 'absolute',
+            right: 16,
+            top: 24,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon fontSize="large" sx={{ color: 'text.primary' }} />
+        </IconButton>
+      )}
       <Typography
         variant="h4"
         sx={{
-          pt: 8.75,
+          pt: hideCloseButton ? 5 : 8.75,
           px: { xs: MOBILE_PADDING_X, md: DESKTOP_PADDING_X },
-          pb: 3,
+          pb: disableBottomTitlePadding ? 0 : 3,
         }}
       >
         {title}
@@ -103,16 +109,6 @@ export default function AppDialog({
             background: 'white',
           }}
         >
-          {primaryButtonText && (
-            <AppButton
-              type={isForm ? 'submit' : 'button'}
-              fullWidth
-              onClick={onPrimaryButtonClick}
-              loading={isLoading}
-            >
-              {primaryButtonText}
-            </AppButton>
-          )}
           {secondaryButtonText && (
             <AppButton
               disabled={disableSecondaryButton}
@@ -122,6 +118,18 @@ export default function AppDialog({
               onClick={onSecondaryButtonClick}
             >
               {secondaryButtonText}
+            </AppButton>
+          )}
+          {primaryButtonText && (
+            <AppButton
+              disabled={disableSecondaryButton}
+              variant="outlined"
+              type={isForm ? 'submit' : 'button'}
+              fullWidth
+              onClick={onPrimaryButtonClick}
+              loading={isLoading}
+            >
+              {primaryButtonText}
             </AppButton>
           )}
         </DialogActions>
