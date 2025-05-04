@@ -7,9 +7,10 @@ import { InputLabel, Stack, TextField, Typography } from '@mui/material';
 
 import { Colors } from '@config/styles/Colors';
 import PlacesForm from '@features/trip/components/PlacesForm';
+import { getTripTotalBudget } from '@features/trip/utils/getTripTotalBudget';
 import DateSelectInput from '@features/ui/form/DateSelectInput';
 
-import type { Expense, Trip } from '../../../types';
+import type { Trip } from '../../../types';
 import ContentCard from './ContentCard';
 
 interface Props {
@@ -171,7 +172,4 @@ function useWatchChange(
 
     return () => formUpdateSubscription.unsubscribe();
   }, [onUpdateDebounced, watch]);
-}
-function getTripTotalBudget(expenses: Expense[]) {
-  return expenses.reduce((total, expense) => total + expense.amount, 0);
 }

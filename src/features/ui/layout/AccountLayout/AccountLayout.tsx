@@ -125,7 +125,13 @@ export default function AccountLayout() {
         <>
           <AppBar
             position="fixed"
-            sx={{ boxShadow: 'none', backgroundColor: 'grey.100' }}
+            sx={{
+              boxShadow: 'none',
+              backgroundColor: {
+                xs: isPrimaryNavBackgroundColor ? 'primary.main' : 'grey.100',
+                md: 'grey.100',
+              },
+            }}
           >
             <Toolbar sx={TOOLBAR_STYLES}>
               <IconButton
