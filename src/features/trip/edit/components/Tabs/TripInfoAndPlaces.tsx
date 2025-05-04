@@ -9,7 +9,7 @@ import { Colors } from '@config/styles/Colors';
 import PlacesForm from '@features/trip/components/PlacesForm';
 import DateSelectInput from '@features/ui/form/DateSelectInput';
 
-import { Expense, Trip } from '../types';
+import type { Expense, Trip } from '../../../types';
 import ContentCard from './ContentCard';
 
 interface Props {
