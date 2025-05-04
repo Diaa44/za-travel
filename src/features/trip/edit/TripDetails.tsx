@@ -16,7 +16,6 @@ import AppDialog from '@features/ui/AppDialog';
 import useDialog from '@hooks/useDialog';
 import useToast from '@hooks/useToast ';
 
-import TripTabs from '../Tabs/TripTabs';
 import {
   useDeleteTripMutation,
   useGetTripQuery,
@@ -24,6 +23,7 @@ import {
 } from '../store/tripsApi';
 import type { Trip } from '../types';
 import Hero from './Hero/Hero';
+import TripTabs from './components/Tabs/TripTabs';
 
 export default function TripDetails() {
   const navigate = useNavigate();

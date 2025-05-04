@@ -117,6 +117,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& button': {
+            fontSize: '1.125rem',
+            lineHeight: '1.688rem',
             minHeight: 65,
           },
         },

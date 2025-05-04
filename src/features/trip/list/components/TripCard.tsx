@@ -11,19 +11,16 @@ import {
 
 import { AppRoutes } from '@config/routes';
 import { Colors } from '@config/styles/Colors';
+import { usePreviewImageSrc } from '@features/trip/hooks/usePreviewImageSrc';
+import { Trip } from '@features/trip/types';
 import { formatDate } from '@services/date';
-
-import { TRIP_PREVIEW_IMAGES } from '../data';
-import { Trip } from '../types';
 
 interface Props {
   trip: Trip;
 }
 
 export default function TripCard({ trip }: Props) {
-  const previewImageUrl = TRIP_PREVIEW_IMAGES.find(
-    (img) => img.id === trip.previewImage?.templateImageId,
-  )?.src;
+  const previewImageSrc = usePreviewImageSrc(trip.previewImage);
 
   return (
     <Card
@@ -34,9 +31,9 @@ export default function TripCard({ trip }: Props) {
         LinkComponent={Link}
         href={`${AppRoutes.trips}/${trip.id}`}
       >
-        {previewImageUrl && (
+        {previewImageSrc && (
           <img
-            src={previewImageUrl}
+            src={previewImageSrc}
             alt="Trip Preview Image"
             style={{
               display: 'block',
