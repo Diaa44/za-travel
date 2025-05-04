@@ -1,8 +1,17 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Box, Button } from '@mui/material';
 
 import Logo from '@features/ui/logo/Logo';
 
 function AppButtonPage() {
+  const navigate = useNavigate(); // 👈 Hook to handle navigation
+  const handleLogin = () => {
+    navigate('/login'); // 👈 Replace '/login' with your actual route
+  };
+  const handleSignup = () => {
+    navigate('/sign-up'); //
+  };
   return (
     <Box
       sx={{
@@ -22,6 +31,7 @@ function AppButtonPage() {
         <Button
           variant="outlined"
           size="medium"
+          onClick={handleLogin} //
           sx={{
             color: 'text.main',
             textTransform: 'none',
@@ -38,6 +48,7 @@ function AppButtonPage() {
         <Button
           variant="contained"
           size="medium"
+          onClick={handleSignup} //
           sx={{
             color: 'text.grey',
             textTransform: 'none',
