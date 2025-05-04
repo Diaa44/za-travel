@@ -1,5 +1,6 @@
-import FilesForm from '../components/Files/FilesForm';
-import { Trip, TripFile } from '../types';
+import FilesForm from '@features/trip/components/Files/FilesForm';
+import { Trip, TripFile } from '@features/trip/types';
+
 import ContentCard from './ContentCard';
 
 interface Props {

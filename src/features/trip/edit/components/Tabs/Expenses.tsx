@@ -3,15 +3,15 @@ import { useMemo } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import { Card, Stack, Typography } from '@mui/material';
 
+import ExpenseCategoryIcon from '@features/trip/components/Expenses/ExpenseCategoryIcon';
+import ExpenseDialog from '@features/trip/components/Expenses/ExpenseDialog';
 import ExpensesTable from '@features/trip/components/Expenses/ExpensesTable';
+import { EXPENSE_ICON_BY_CATEGORY } from '@features/trip/data';
+import { Expense, ExpenseCategory, Trip } from '@features/trip/types';
 import AppButton from '@features/ui/AppButton';
 import { useBreakpoints } from '@hooks/useBreakpoints';
 import useDialog from '@hooks/useDialog';
 
-import ExpenseCategoryIcon from '../components/Expenses/ExpenseCategoryIcon';
-import ExpenseDialog from '../components/Expenses/ExpenseDialog';
-import { EXPENSE_ICON_BY_CATEGORY } from '../data';
-import { Expense, ExpenseCategory, Trip } from '../types';
 import ContentCard from './ContentCard';
 
 type ExpenseGroup = {
